@@ -1,9 +1,13 @@
-//
-//  main.cpp
-//  SigletonPattern
-//
+/* File Name: main.cpp
+* Lab # and Assignment #: Lab #7
+* Lab section: 1
+* Completed by: Graydon Hall and Jared Kraus
+* Submission Date: 2021-11-22
+*/
+
 #include "Client_A.hpp"
 #include "Client_B.hpp"
+#include "User.hpp"
 #include <iostream>
 using namespace std;
 
@@ -35,11 +39,15 @@ int main() {
         cout << "Found: username: " << u->username << " and the password is: " << u->password <<  endl;
     else
         cout << "Username or password NOT found" << endl;
+
+
     cout << "Now client ca validates existence of username Jack with a wrong password. " << endl;
     if( User *u = ca.validate("Jack", "apple4000"))
         cout << "Found: username is: " << u->username << " and password is: " << u->password <<  endl;
     else
         cout << "Username or password NOT found" << endl;
+
+
     
     cout << "Trying to make a new Client_A object which is a copy of client ca:" << endl;
     Client_A ca2 = ca;

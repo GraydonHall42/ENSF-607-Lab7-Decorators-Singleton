@@ -13,10 +13,10 @@
 using namespace std;
 
 class LoginServer{
-protected:
+   
+private:
     static LoginServer* instance;
     vector<User> users;
-private:
     LoginServer(){}
     LoginServer(const LoginServer& src);
     LoginServer& operator=(LoginServer&rhs);

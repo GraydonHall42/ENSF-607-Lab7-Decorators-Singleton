@@ -9,11 +9,11 @@ package ExB;
 
 public abstract class Decorator implements Component {
 
-    protected Component component;
-    protected int x;
-    protected int y;
-    protected int width;
-    protected int height;
+    Component component;
+    int x;
+    int y;
+    int width;
+    int height;
 
 
     public Decorator(Component component, int x, int y, int width, int height) {
